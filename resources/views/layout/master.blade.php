@@ -28,8 +28,7 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 @section('navigation')
-                <li class="active"><a href="/">制作计划</a></li>
-                <li><a href="/makeMealList">制作餐单</a></li>
+
                 @show
             </ul>
         </div><!--/.nav-collapse -->

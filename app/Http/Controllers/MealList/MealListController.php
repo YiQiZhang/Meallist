@@ -9,7 +9,15 @@ class MealListController extends Controller
 {
     public function index()
     {
-        return view('index')->with('param', [
+        return view('meallist.makePlan')->with('param', [
+            'nutrition_type' => Meallist::$nutrition_type,
+            'meal_type' => MealList::$meal_type
+        ]);
+    }
+
+    public function makeMealList()
+    {
+        return view('meallist.makeMealList')->with('param', [
             'nutrition_type' => Meallist::$nutrition_type,
             'meal_type' => MealList::$meal_type
         ]);
