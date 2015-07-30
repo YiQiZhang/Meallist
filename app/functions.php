@@ -33,3 +33,12 @@ if (!function_exists('tpl_language')) {
         return isset($arr[$key]) ? $arr[$key] : 'unknown';
     }
 }
+
+
+if (!function_exists('meal_nutrition_input_name')) {
+    function meal_nutrition_input_name($meal_name, $nutrition)
+    {
+        return $meal_name.'_'.$nutrition;
+    }
+}
+

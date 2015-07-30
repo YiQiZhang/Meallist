@@ -16,8 +16,8 @@ class CreatePlanTable extends Migration
             //
             $table->increments('id');
             $table->string('name');
-            $table->dateTime('from_date');
-            $table->dateTime('to_date');
+            $table->timestamp('from_date');
+            $table->timestamp('to_date');
             $table->decimal('energy', 8, 2);
             $table->decimal('protein', 8, 2);
             $table->decimal('fat', 8, 2);

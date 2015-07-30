@@ -28,7 +28,6 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 @section('navigation')
-
                 @show
             </ul>
         </div><!--/.nav-collapse -->
@@ -43,5 +42,12 @@
 <script src="/static/js/jquery-1.11.3.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/static/css/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+<script>
+function l(msg){
+    console.log(msg);
+}
+</script>
+@section('js')
+@show
 </body>
 </html>

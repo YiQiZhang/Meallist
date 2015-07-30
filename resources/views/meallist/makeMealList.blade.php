@@ -136,10 +136,8 @@
     </div>
 </div>
 
-<script>
-    // 初始化mealListData
-    var mealListData = {};
+@endsection
 
+@section('js')
 
-</script>
 @endsection
