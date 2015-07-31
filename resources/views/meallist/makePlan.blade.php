@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <form action="/makePlanAction" method="post" id="makePlanAction-Form">
+    <form action="/makePlanAction" method="post" id="makePlanActionForm">
         {!! csrf_field() !!}
         <div class="form-group">
             <label for="from-date">选择计划</label>
@@ -43,7 +43,7 @@
             <tr>
                 <th>汇总:</th>
                 @foreach($param['nutrition_type'] as $nutrition_type)
-                    <td class="total-container">{{ tpl_language($nutrition_type) }}<span class="label label-primary data" data-nutrition="{{ $nutrition_type }}">0</span>单位</td>
+                    <td class="total-container">{{ tpl_language($nutrition_type) }}<span class="label label-primary data" data-nutrition="{{ $nutrition_type }}">0</span>{{ $param['nutrition_unit'][$nutrition_type] }}</td>
                 @endforeach
             </tr>
             </tbody>
@@ -140,6 +140,11 @@ jQuery(function(){
 
         planId = plan_id;
         updatePlanData(planId);
+    });
+    jQuery("#from_date,#to_date").change(function(){
+        var _ = jQuery(this),
+            name = _.attr("name");
+        planData[name] = _.val();
     });
 });
 </script>

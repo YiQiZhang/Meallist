@@ -6,6 +6,8 @@
  * Time: 2:54 PM
  */
 
+use App\MealList;
+
 if (!function_exists('tpl_language')) {
     /**
      * Return naked domain without prefix
@@ -28,9 +30,27 @@ if (!function_exists('tpl_language')) {
             'afternoonTea' => '下午茶',
             'dinner' => '晚餐',
             'nightSnack' => '宵夜',
-            'extraMeal' => '加餐'
+            'extraMeal' => '加餐',
+            'grain' => '谷物',
+            'vegetable' => '蔬菜',
+            'fruit' => '水果',
+            'meat' => '肉类',
+            'beanMilk' => '蛋奶',
+            'oil' => '油脂'
         ];
         return isset($arr[$key]) ? $arr[$key] : 'unknown';
+    }
+}
+
+if(!function_exists('get_constant')) {
+    function get_constant()
+    {
+        return [
+            'nutrition_unit' => MealList::$nutrition_unit,
+            'nutrition_type' => Meallist::$nutrition_type,
+            'meal_type' => MealList::$meal_type,
+            'food_type' => MealList::$food_type
+        ];
     }
 }
 
